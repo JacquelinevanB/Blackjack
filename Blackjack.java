@@ -64,6 +64,27 @@ public class Blackjack {
     }
 
     /** 
+     * Function name – hitOrStay
+     * @return (String)
+     *
+     * Inside the function:
+     *   1. Asks the user to hit or stay.
+     *   2. If the user doesn't enter "hit" or "stay", keeps asking them to try again by printing:
+     *      Please write 'hit' or 'stay'
+     *   3. Returns the user's option 
+     */
+    public static String hitOrStay() {
+        System.out.println("Would you like to hit or stay?");
+        String response = scan.nextLine();
+
+        while (!(response.equalsIgnoreCase("hit") || response.equalsIgnoreCase("stay"))) {            
+            System.out.println("Please write 'hit' or 'stay': ");
+            response = scan.nextLine();
+        }
+        return response;
+    }
+
+    /** 
      * Function name – drawRandomCard
      * @return (int)
      *
@@ -216,25 +237,5 @@ public class Blackjack {
         "  |_____|\n";
     }
     
-    /** 
-     * Function name – hitOrStay
-     * @return (String)
-     *
-     * Inside the function:
-     *   1. Asks the user to hit or stay.
-     *   2. If the user doesn't enter "hit" or "stay", keeps asking them to try again by printing:
-     *      Please write 'hit' or 'stay'
-     *   3. Returns the user's option 
-     */
-    public static String hitOrStay() {
-        System.out.println("Would you like to hit or stay?");
-        String response = scan.nextLine();
-
-        while (!(response.equalsIgnoreCase("hit") || response.equalsIgnoreCase("stay"))) {            
-            System.out.println("Please write 'hit' or 'stay': ");
-            response = scan.nextLine();
-        }
-        return response;
-    }
 }
 
